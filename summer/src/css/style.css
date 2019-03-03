@@ -1,0 +1,64 @@
+*{
+	/*Свойства width и height включают в себя значения
+	 полей и границ, но не отступов (margin).*/
+	box-sizing: border-box;
+}
+
+body{
+	color: #fff;
+	font-size: 40px;
+	weight: bold;
+	font-family: 'Bad Script';
+	text-shadow: 0px 0px 18px #000;
+}
+.slider{
+	display: flex; /*in row*/
+	justify-content: center; /*horizontal*/
+	align-items: center;  /*vertical*/
+}
+
+.item{
+	height: 100vh;
+	display: flex;
+	flex-basis: 25%;
+	justify-content: center;
+	align-items: center;
+	background-color: #aeaeae;
+	transition: 0.2s;
+}
+
+.item:hover{
+	flex-basis: 100%;
+}
+
+.item_1{
+	background: url(../img/1.jpg) no-repeat center center;
+	background-size: cover;
+}
+.item_2{
+	background: url(../img/2.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.item_3{
+	background: url(../img/3.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.item_4{
+	background: url(../img/4.jpg) no-repeat center center;
+	background-size: cover;
+}
+/*For small screens*/
+@media(max-width: 640px){
+	.slider{
+		height: 100vh;
+		flex-flow: column;
+	}
+	.item{
+		width: 100%;
+	}
+	.item:hover{
+		flex-grow: 100%;
+	}
+}
